@@ -1,11 +1,11 @@
 COMPILE_ARCH=arm
 COMPILE_PLATFORM=linux
-ANDROID_NDK_DIR=/home/roderick/android/android-ndk-1.6_r1
-CC=/home/roderick/android/arm-eabi-4.4.0/bin/arm-eabi-gcc
+ANDROID_NDK_DIR=/opt/android-ndk-r5c
+CC=/opt/android-ndk-r5c/toolchains/arm-eabi-4.4.0/prebuilt/linux-x86/bin/arm-eabi-gcc
 #ANDROID_CFLAGS=-mcpu=cortex-a8 -mfloat-abi=softfp -mfpu=neon -fpic -fno-short-enums -ffunction-sections -funwind-tables -fstack-protector -ftree-vectorize -fsingle-precision-constant
 ANDROID_CFLAGS=-march=armv5te -mtune=xscale -msoft-float -fpic -mthumb-interwork -ffunction-sections -funwind-tables -fstack-protector -fno-short-enums -D__ARM_ARCH_5__ -D__ARM_ARCH_5T__  -D__ARM_ARCH_5E__ -D__ARM_ARCH_5TE__
 CFLAGS=$(ANDROID_CFLAGS) -I$(ANDROID_NDK_DIR)/build/platforms/android-4/arch-arm/usr/include -DANDROID -D__linux__ -D__MATH_NEON
-LDFLAGS=-nostdlib -L$(ANDROID_NDK_DIR)/build/platforms/android-4/arch-arm/usr/lib
+LDFLAGS=-nostdlib -L$(ANDROID_NDK_DIR)/platforms/android-9/arch-arm/usr/lib
 BUILD_CLIENT=1
 BUILD_CLIENT_SMP=0
 BUILD_GAME_QVM=0
