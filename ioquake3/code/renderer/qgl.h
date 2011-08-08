@@ -47,9 +47,12 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 #elif defined( __linux__ )
 
+#include "../android/android_glimp.h"
+//#include <GLES/glplatform.h>
+#include "/opt/android-ndk-r5c/platforms/android-9/arch-arm/usr/include/GLES/glplatform.h"
 #include <GLES/gl.h>
 
-#include "../android/android_glimp.h"
+
 
 #elif defined( __FreeBSD__ ) // rb010123
 

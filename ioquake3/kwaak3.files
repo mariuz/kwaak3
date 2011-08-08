@@ -748,7 +748,6 @@ code/ui/ui_shared.h
 code/ui/ui_syscalls.asm
 code/ui/ui_syscalls.c
 COPYING.txt
-create_project_files.pl
 id-readme.txt
 md4-readme.txt
 misc/32x32/quake3.png
